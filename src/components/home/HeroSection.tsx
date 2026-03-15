@@ -50,7 +50,7 @@ export default function HeroSection() {
                   Shop Now <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary/30 text-primary-foreground hover:bg-primary/10 font-heading text-base px-8 py-6">
+              <Button asChild variant="outline" size="lg" className="border-primary bg-primary/10 text-primary hover:bg-primary/20 font-heading text-base font-semibold px-8 py-6">
                 <a href="tel:+919911573173">
                   <Phone className="mr-2 w-4 h-4" /> Talk to Astrologer
                 </a>
