@@ -25,10 +25,11 @@ export default function Shop() {
     <section className="py-10 md:py-16">
       <div className="container">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <h1 className="text-3xl md:text-4xl font-display font-bold mb-2">
+          <span className="font-heading text-sm text-primary font-semibold uppercase tracking-[0.2em]">Our Collection</span>
+          <h1 className="text-3xl md:text-4xl font-display font-bold mt-2 mb-2">
             Our <span className="text-gradient-gold">Products</span>
           </h1>
-          <p className="text-muted-foreground mb-8">Discover divine energy products for your spiritual journey</p>
+          <p className="text-muted-foreground font-body mb-8">Discover divine energy products for your spiritual journey</p>
         </motion.div>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-8 items-start sm:items-center justify-between">
@@ -37,9 +38,9 @@ export default function Shop() {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-full text-sm font-heading font-medium transition-all ${
+                className={`px-5 py-2 rounded-full text-sm font-display tracking-wide transition-all ${
                   selectedCategory === cat
-                    ? "bg-primary text-primary-foreground shadow-gold"
+                    ? "bg-gradient-gold text-cosmic shadow-gold font-bold"
                     : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
                 }`}
               >
@@ -50,7 +51,7 @@ export default function Shop() {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="px-3 py-2 rounded-lg border bg-card text-sm font-heading"
+            className="px-3 py-2 rounded-lg border bg-card text-sm font-body"
           >
             <option value="popularity">Sort by Popularity</option>
             <option value="price-low">Price: Low to High</option>
@@ -66,7 +67,7 @@ export default function Shop() {
         </div>
 
         {filtered.length === 0 && (
-          <p className="text-center text-muted-foreground py-20">No products found in this category.</p>
+          <p className="text-center text-muted-foreground py-20 font-body">No products found in this category.</p>
         )}
       </div>
     </section>
