@@ -1,17 +1,32 @@
 import { useState, useMemo } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import ProductCard from "@/components/shop/ProductCard";
 import { products, categories } from "@/data/products";
 import { motion } from "framer-motion";
+import { Search } from "lucide-react";
 
 export default function Shop() {
   const [searchParams] = useSearchParams();
   const initialCat = searchParams.get("category") || "All";
   const [selectedCategory, setSelectedCategory] = useState(initialCat);
   const [sortBy, setSortBy] = useState("popularity");
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const filtered = useMemo(() => {
     let list = selectedCategory === "All" ? [...products] : products.filter((p) => p.category === selectedCategory);
+
+    // Apply search filter
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      list = list.filter(
+        (p) =>
+          p.name.toLowerCase().includes(q) ||
+          p.category.toLowerCase().includes(q) ||
+          p.tags.some((t) => t.toLowerCase().includes(q))
+      );
+    }
+
     switch (sortBy) {
       case "price-low": list.sort((a, b) => a.salePrice - b.salePrice); break;
       case "price-high": list.sort((a, b) => b.salePrice - a.salePrice); break;
@@ -19,7 +34,7 @@ export default function Shop() {
       default: list.sort((a, b) => b.reviewCount - a.reviewCount);
     }
     return list;
-  }, [selectedCategory, sortBy]);
+  }, [selectedCategory, sortBy, searchQuery]);
 
   return (
     <section className="py-10 md:py-16">
@@ -29,8 +44,20 @@ export default function Shop() {
           <h1 className="text-3xl md:text-4xl font-display font-bold mt-2 mb-2">
             Our <span className="text-gradient-gold">Products</span>
           </h1>
-          <p className="text-muted-foreground font-body mb-8">Discover divine energy products for your spiritual journey</p>
+          <p className="text-muted-foreground font-body mb-6">Discover divine energy products for your spiritual journey</p>
         </motion.div>
+
+        {/* Search bar */}
+        <div className="relative mb-6">
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search products by name, category, or keyword..."
+            className="w-full pl-10 pr-4 py-3 rounded-xl border border-border/50 bg-card text-sm font-body focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/30 transition-all"
+          />
+        </div>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-8 items-start sm:items-center justify-between">
           <div className="flex flex-wrap gap-2">
@@ -67,7 +94,9 @@ export default function Shop() {
         </div>
 
         {filtered.length === 0 && (
-          <p className="text-center text-muted-foreground py-20 font-body">No products found in this category.</p>
+          <p className="text-center text-muted-foreground py-20 font-body">
+            {searchQuery ? `No products found for "${searchQuery}"` : "No products found in this category."}
+          </p>
         )}
       </div>
     </section>
