@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/shop/ProductCard";
 import { getBestsellers } from "@/data/products";
+import { motion } from "framer-motion";
 
 export default function BestSellers() {
   const bestsellers = getBestsellers();
@@ -11,13 +12,14 @@ export default function BestSellers() {
     <section className="py-16 md:py-24">
       <div className="container">
         <div className="flex items-end justify-between mb-10">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <span className="font-heading text-sm text-primary font-semibold uppercase tracking-[0.2em]">Most Popular</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mt-2">
               Best <span className="text-gradient-gold">Sellers</span>
             </h2>
-            <p className="mt-3 text-muted-foreground">Our most loved products by customers</p>
-          </div>
-          <Button asChild variant="ghost" className="hidden md:flex text-primary font-heading">
+            <p className="mt-3 text-muted-foreground font-body">Our most loved products by customers</p>
+          </motion.div>
+          <Button asChild variant="ghost" className="hidden md:flex text-primary font-heading text-base">
             <Link to="/shop">
               View All <ArrowRight className="ml-1 w-4 h-4" />
             </Link>
@@ -29,7 +31,7 @@ export default function BestSellers() {
           ))}
         </div>
         <div className="mt-8 text-center md:hidden">
-          <Button asChild className="bg-primary text-primary-foreground font-heading">
+          <Button asChild className="bg-gradient-gold text-cosmic font-display text-sm tracking-wider">
             <Link to="/shop">View All Products</Link>
           </Button>
         </div>
