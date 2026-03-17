@@ -39,6 +39,11 @@ export default function Shop() {
 
   return (
     <section className="py-10 md:py-16">
+      <Helmet>
+        <title>Shop Spiritual Products | Energized Sprays & Tilaks | Daivyaura</title>
+        <meta name="description" content="Buy authentic energized sprays, sacred tilaks, camphor oils & spiritual wellness products online. Free shipping above ₹999. Cash on delivery available across India." />
+        <link rel="canonical" href="https://daivyaaura.lovable.app/shop" />
+      </Helmet>
       <div className="container">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <span className="font-heading text-sm text-primary font-semibold uppercase tracking-[0.2em]">Our Collection</span>
