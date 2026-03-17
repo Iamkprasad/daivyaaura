@@ -50,7 +50,7 @@ export default function ProductCard({ product }: { product: Product }) {
               {product.name}
             </h3>
             <div className="flex items-center gap-1 mt-1.5">
-              <Star className="w-3.5 h-3.5 fill-primary text-primary" />
+              <Star className="w-3.5 h-3.5 fill-secondary text-secondary" />
               <span className="text-xs font-medium text-muted-foreground font-body">
                 {product.rating} ({product.reviewCount})
               </span>
