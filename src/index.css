@@ -126,32 +126,32 @@
   }
   .text-gradient-gold {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(45 80% 70%), hsl(43 76% 52%), hsl(40 70% 40%));
+    background-image: linear-gradient(135deg, hsl(54 97% 65%), hsl(152 95% 34%), hsl(152 60% 28%));
   }
   .bg-gradient-hero {
-    background: linear-gradient(135deg, hsl(267 45% 15%), hsl(240 20% 8%));
+    background: linear-gradient(135deg, hsl(152 40% 12%), hsl(160 30% 6%));
   }
   .bg-gradient-gold {
-    background: linear-gradient(135deg, hsl(43 76% 52%), hsl(45 80% 65%));
+    background: linear-gradient(135deg, hsl(152 95% 34%), hsl(152 80% 42%));
   }
   .bg-cosmic {
-    background: linear-gradient(180deg, hsl(240 20% 6%), hsl(260 15% 10%));
+    background: linear-gradient(180deg, hsl(160 30% 6%), hsl(160 20% 10%));
   }
   .bg-cosmic-radial {
-    background: radial-gradient(ellipse at 50% 0%, hsl(267 45% 20% / 0.4), transparent 70%),
-                linear-gradient(180deg, hsl(240 20% 6%), hsl(260 15% 10%));
+    background: radial-gradient(ellipse at 50% 0%, hsl(152 60% 20% / 0.4), transparent 70%),
+                linear-gradient(180deg, hsl(160 30% 6%), hsl(160 20% 10%));
   }
   .shadow-gold {
-    box-shadow: 0 10px 40px -10px hsl(43 76% 52% / 0.35);
+    box-shadow: 0 10px 40px -10px hsl(152 95% 34% / 0.35);
   }
   .shadow-card {
-    box-shadow: 0 4px 20px -4px hsl(260 20% 15% / 0.08);
+    box-shadow: 0 4px 20px -4px hsl(160 20% 15% / 0.08);
   }
   .shadow-glow {
-    box-shadow: 0 0 30px hsl(43 76% 52% / 0.25), 0 0 60px hsl(43 76% 52% / 0.1);
+    box-shadow: 0 0 30px hsl(152 95% 34% / 0.25), 0 0 60px hsl(54 97% 49% / 0.1);
   }
   .border-gold {
-    border-color: hsl(43 76% 52% / 0.3);
+    border-color: hsl(152 95% 34% / 0.3);
   }
 
   /* Sacred geometry overlay */
