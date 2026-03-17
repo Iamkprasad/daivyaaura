@@ -78,7 +78,7 @@ export default function ProductDetail() {
               {product.discount > 0 && (
                 <>
                   <span className="text-lg text-muted-foreground line-through font-body">₹{product.regularPrice}</span>
-                  <span className="bg-gradient-gold text-cosmic font-display font-bold text-xs px-3 py-1 rounded-full shadow-gold">
+                  <span className="bg-secondary text-secondary-foreground font-display font-bold text-xs px-3 py-1 rounded-full">
                     Save {product.discount}%
                   </span>
                 </>
