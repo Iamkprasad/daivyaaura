@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Shield, Star, Truck, Heart, ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
