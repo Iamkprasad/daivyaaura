@@ -32,7 +32,7 @@ export default function ProductCard({ product }: { product: Product }) {
               loading="lazy"
             />
             {product.discount > 0 && (
-              <span className="absolute top-3 left-3 bg-gradient-gold text-cosmic text-xs font-display font-bold px-3 py-1 rounded-full shadow-gold">
+              <span className="absolute top-3 left-3 bg-secondary text-secondary-foreground text-xs font-display font-bold px-3 py-1 rounded-full">
                 {product.discount}% OFF
               </span>
             )}
