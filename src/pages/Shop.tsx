@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import ProductCard from "@/components/shop/ProductCard";
 import { products, categories } from "@/data/products";
 import { motion } from "framer-motion";
