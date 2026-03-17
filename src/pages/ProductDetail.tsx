@@ -67,7 +67,7 @@ export default function ProductDetail() {
             <div className="flex items-center gap-2 mb-4">
               <div className="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className={`w-4 h-4 ${i < Math.floor(product.rating) ? "fill-primary text-primary" : "text-muted-foreground/30"}`} />
+                  <Star key={i} className={`w-4 h-4 ${i < Math.floor(product.rating) ? "fill-secondary text-secondary" : "text-muted-foreground/30"}`} />
                 ))}
               </div>
               <span className="text-sm text-muted-foreground font-body">({product.reviewCount} reviews)</span>
