@@ -19,7 +19,7 @@ export default function ProductDetail() {
     return (
       <div className="container py-20 text-center">
         <h1 className="text-2xl font-display font-bold mb-4">Product Not Found</h1>
-        <Button asChild className="bg-gradient-gold text-cosmic font-display"><Link to="/shop">Back to Shop</Link></Button>
+        <Button asChild className="bg-gradient-gold text-primary-foreground font-display"><Link to="/shop">Back to Shop</Link></Button>
       </div>
     );
   }
