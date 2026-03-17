@@ -36,7 +36,7 @@ export default function Newsletter() {
               required
               className="bg-card border-border font-body"
             />
-            <Button type="submit" className="bg-gradient-gold text-cosmic hover:opacity-90 font-display text-xs tracking-wider shrink-0 shadow-gold">
+            <Button type="submit" className="bg-gradient-gold text-primary-foreground hover:opacity-90 font-display text-xs tracking-wider shrink-0 shadow-gold">
               <Send className="w-4 h-4 mr-2" /> Subscribe
             </Button>
           </form>

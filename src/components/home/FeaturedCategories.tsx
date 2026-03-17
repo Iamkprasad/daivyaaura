@@ -5,8 +5,8 @@ import { Droplets, CircleDot, Flame, Heart } from "lucide-react";
 const cats = [
   { name: "Sprays", icon: Droplets, count: 5, desc: "Energized spiritual sprays", color: "from-primary/20 to-primary/5" },
   { name: "Tilaks", icon: CircleDot, count: 3, desc: "Sacred blessed tilaks", color: "from-secondary/20 to-secondary/5" },
-  { name: "Oils", icon: Flame, count: 1, desc: "Pure essential oils", color: "from-saffron/20 to-saffron/5" },
-  { name: "Wellness", icon: Heart, count: 1, desc: "Spiritual wellness tools", color: "from-primary/15 to-secondary/10" },
+  { name: "Oils", icon: Flame, count: 1, desc: "Pure essential oils", color: "from-primary/15 to-secondary/10" },
+  { name: "Wellness", icon: Heart, count: 1, desc: "Spiritual wellness tools", color: "from-secondary/15 to-primary/10" },
 ];
 
 export default function FeaturedCategories() {

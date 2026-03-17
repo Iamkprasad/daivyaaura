@@ -32,7 +32,7 @@ export default function ProductCard({ product }: { product: Product }) {
               loading="lazy"
             />
             {product.discount > 0 && (
-              <span className="absolute top-3 left-3 bg-gradient-gold text-cosmic text-xs font-display font-bold px-3 py-1 rounded-full shadow-gold">
+              <span className="absolute top-3 left-3 bg-secondary text-secondary-foreground text-xs font-display font-bold px-3 py-1 rounded-full">
                 {product.discount}% OFF
               </span>
             )}
@@ -50,7 +50,7 @@ export default function ProductCard({ product }: { product: Product }) {
               {product.name}
             </h3>
             <div className="flex items-center gap-1 mt-1.5">
-              <Star className="w-3.5 h-3.5 fill-primary text-primary" />
+              <Star className="w-3.5 h-3.5 fill-secondary text-secondary" />
               <span className="text-xs font-medium text-muted-foreground font-body">
                 {product.rating} ({product.reviewCount})
               </span>
@@ -69,7 +69,7 @@ export default function ProductCard({ product }: { product: Product }) {
               <Button
                 size="sm"
                 onClick={handleAdd}
-                className="bg-gradient-gold text-cosmic hover:opacity-90 shadow-gold"
+                className="bg-gradient-gold text-primary-foreground hover:opacity-90 shadow-gold"
               >
                 <ShoppingCart className="w-4 h-4" />
               </Button>

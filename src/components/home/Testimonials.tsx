@@ -50,7 +50,7 @@ export default function Testimonials() {
               <Quote className="w-8 h-8 text-primary/30 mb-3" />
               <div className="flex gap-0.5 mb-3">
                 {Array.from({ length: t.rating }).map((_, j) => (
-                  <Star key={j} className="w-4 h-4 fill-primary text-primary" />
+                  <Star key={j} className="w-4 h-4 fill-secondary text-secondary" />
                 ))}
               </div>
               <p className="text-primary-foreground/70 text-sm leading-relaxed mb-5 font-body">"{t.text}"</p>

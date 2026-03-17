@@ -19,7 +19,7 @@ export default function ProductDetail() {
     return (
       <div className="container py-20 text-center">
         <h1 className="text-2xl font-display font-bold mb-4">Product Not Found</h1>
-        <Button asChild className="bg-gradient-gold text-cosmic font-display"><Link to="/shop">Back to Shop</Link></Button>
+        <Button asChild className="bg-gradient-gold text-primary-foreground font-display"><Link to="/shop">Back to Shop</Link></Button>
       </div>
     );
   }
@@ -67,7 +67,7 @@ export default function ProductDetail() {
             <div className="flex items-center gap-2 mb-4">
               <div className="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className={`w-4 h-4 ${i < Math.floor(product.rating) ? "fill-primary text-primary" : "text-muted-foreground/30"}`} />
+                  <Star key={i} className={`w-4 h-4 ${i < Math.floor(product.rating) ? "fill-secondary text-secondary" : "text-muted-foreground/30"}`} />
                 ))}
               </div>
               <span className="text-sm text-muted-foreground font-body">({product.reviewCount} reviews)</span>
@@ -78,7 +78,7 @@ export default function ProductDetail() {
               {product.discount > 0 && (
                 <>
                   <span className="text-lg text-muted-foreground line-through font-body">₹{product.regularPrice}</span>
-                  <span className="bg-gradient-gold text-cosmic font-display font-bold text-xs px-3 py-1 rounded-full shadow-gold">
+                  <span className="bg-secondary text-secondary-foreground font-display font-bold text-xs px-3 py-1 rounded-full">
                     Save {product.discount}%
                   </span>
                 </>
@@ -98,7 +98,7 @@ export default function ProductDetail() {
                   <Plus className="w-4 h-4" />
                 </button>
               </div>
-              <Button onClick={handleAdd} size="lg" className="flex-1 bg-gradient-gold text-cosmic hover:opacity-90 font-display text-sm tracking-wider shadow-glow">
+              <Button onClick={handleAdd} size="lg" className="flex-1 bg-gradient-gold text-primary-foreground hover:opacity-90 font-display text-sm tracking-wider shadow-glow">
                 <ShoppingCart className="w-4 h-4 mr-2" /> Add to Cart
               </Button>
             </div>

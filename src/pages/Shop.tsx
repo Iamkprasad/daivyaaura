@@ -67,7 +67,7 @@ export default function Shop() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-5 py-2 rounded-full text-sm font-display tracking-wide transition-all ${
                   selectedCategory === cat
-                    ? "bg-gradient-gold text-cosmic shadow-gold font-bold"
+                    ? "bg-gradient-gold text-primary-foreground shadow-gold font-bold"
                     : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
                 }`}
               >
