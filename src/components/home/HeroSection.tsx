@@ -65,7 +65,7 @@ export default function HeroSection() {
               </Button>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Button asChild variant="outline" size="lg" className="border-primary-foreground/20 text-primary-foreground/70 hover:bg-primary-foreground/10 font-heading text-sm sm:text-base font-semibold px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto">
+              <Button asChild variant="outline" size="lg" className="border-primary/40 bg-transparent text-primary-foreground hover:bg-primary/15 hover:text-primary-foreground font-heading text-sm sm:text-base font-semibold px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto">
                 <a href="tel:+919911573173">
                   <Phone className="mr-2 w-4 h-4" /> Talk to Astrologer
                 </a>
