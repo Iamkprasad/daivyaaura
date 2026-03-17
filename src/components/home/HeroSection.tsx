@@ -45,12 +45,12 @@ export default function HeroSection() {
               Discover energized sprays, sacred tilaks, and wellness products crafted to bring prosperity, protection, and peace to your life.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-gradient-gold text-cosmic hover:opacity-90 font-display text-sm tracking-wider shadow-glow px-8 py-6">
+              <Button asChild size="lg" className="bg-gradient-gold text-primary-foreground hover:opacity-90 font-display text-sm tracking-wider shadow-glow px-8 py-6">
                 <Link to="/shop">
                   Shop Now <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary bg-primary/10 text-primary hover:bg-primary/20 font-heading text-base font-semibold px-8 py-6">
+              <Button asChild variant="outline" size="lg" className="border-secondary bg-secondary/20 text-secondary hover:bg-secondary/30 font-heading text-base font-semibold px-8 py-6">
                 <a href="tel:+919911573173">
                   <Phone className="mr-2 w-4 h-4" /> Talk to Astrologer
                 </a>

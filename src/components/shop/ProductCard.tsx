@@ -69,7 +69,7 @@ export default function ProductCard({ product }: { product: Product }) {
               <Button
                 size="sm"
                 onClick={handleAdd}
-                className="bg-gradient-gold text-cosmic hover:opacity-90 shadow-gold"
+                className="bg-gradient-gold text-primary-foreground hover:opacity-90 shadow-gold"
               >
                 <ShoppingCart className="w-4 h-4" />
               </Button>

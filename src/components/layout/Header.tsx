@@ -25,7 +25,7 @@ export default function Header() {
             <Phone className="w-3 h-3" />
             <span>Talk to Astrologer: +91 99115 73173</span>
           </a>
-          <span className="hidden sm:block font-body text-primary/80">✨ Free Shipping on orders above ₹999</span>
+          <span className="hidden sm:block font-body text-secondary/80">✨ Free Shipping on orders above ₹999</span>
         </div>
       </div>
 
