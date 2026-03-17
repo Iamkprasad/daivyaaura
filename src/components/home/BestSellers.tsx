@@ -31,7 +31,7 @@ export default function BestSellers() {
           ))}
         </div>
         <div className="mt-8 text-center md:hidden">
-          <Button asChild className="bg-gradient-gold text-cosmic font-display text-sm tracking-wider">
+          <Button asChild className="bg-gradient-gold text-primary-foreground font-display text-sm tracking-wider">
             <Link to="/shop">View All Products</Link>
           </Button>
         </div>

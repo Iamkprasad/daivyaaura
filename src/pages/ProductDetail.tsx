@@ -98,7 +98,7 @@ export default function ProductDetail() {
                   <Plus className="w-4 h-4" />
                 </button>
               </div>
-              <Button onClick={handleAdd} size="lg" className="flex-1 bg-gradient-gold text-cosmic hover:opacity-90 font-display text-sm tracking-wider shadow-glow">
+              <Button onClick={handleAdd} size="lg" className="flex-1 bg-gradient-gold text-primary-foreground hover:opacity-90 font-display text-sm tracking-wider shadow-glow">
                 <ShoppingCart className="w-4 h-4 mr-2" /> Add to Cart
               </Button>
             </div>

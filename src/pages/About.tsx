@@ -76,7 +76,7 @@ export default function About() {
         <div className="container">
           <h2 className="text-3xl font-display font-bold mb-4">Ready to Begin Your <span className="text-gradient-gold">Spiritual Journey?</span></h2>
           <p className="text-muted-foreground mb-8 max-w-md mx-auto font-body">Explore our curated collection of divine energy products</p>
-          <Button asChild size="lg" className="bg-gradient-gold text-cosmic font-display text-sm tracking-wider shadow-glow px-8">
+          <Button asChild size="lg" className="bg-gradient-gold text-primary-foreground font-display text-sm tracking-wider shadow-glow px-8">
             <Link to="/shop">Shop Our Products <ArrowRight className="ml-2 w-4 h-4" /></Link>
           </Button>
         </div>
