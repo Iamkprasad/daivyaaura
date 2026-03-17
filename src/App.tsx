@@ -16,6 +16,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ShippingPolicy from "./pages/ShippingPolicy";
 import RefundReturns from "./pages/RefundReturns";
 import TermsConditions from "./pages/TermsConditions";
+import BookAppointment from "./pages/BookAppointment";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/book-appointment" element={<BookAppointment />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/shipping-policy" element={<ShippingPolicy />} />
                 <Route path="/refund-returns" element={<RefundReturns />} />

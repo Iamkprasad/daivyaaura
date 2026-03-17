@@ -8,6 +8,7 @@ import logoImg from "@/assets/logo.png";
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "Shop", path: "/shop" },
+  { label: "Book Appointment", path: "/book-appointment" },
   { label: "About", path: "/about" },
 ];
 
