@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Shield, Star, Truck, Heart, ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
@@ -13,6 +14,11 @@ const values = [
 export default function About() {
   return (
     <>
+      <Helmet>
+        <title>About Daivyaura | Trusted Astrology & Spiritual Wellness Brand India</title>
+        <meta name="description" content="Learn about Daivyaura — India's trusted astrology and spiritual wellness brand. Authentic energized products crafted by experienced astrologers and spiritual practitioners." />
+        <link rel="canonical" href="https://daivyaaura.lovable.app/about" />
+      </Helmet>
       {/* Hero */}
       <section className="bg-cosmic-radial cosmic-particles py-20 md:py-28 text-center">
         <div className="container relative z-10">

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -196,6 +197,30 @@ export default function BookAppointment() {
 
   return (
     <>
+      <Helmet>
+        <title>Book Astrology Consultation Online | Vedic Astrologer | Daivyaura</title>
+        <meta name="description" content="Book online astrology & numerology consultation with experienced Vedic astrologers. Get personalized birth chart analysis, kundli matching, career guidance & spiritual remedies." />
+        <link rel="canonical" href="https://daivyaaura.lovable.app/book-appointment" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Astrology Consultation - Daivyaura",
+          "description": "Online Vedic astrology and numerology consultation services including birth chart analysis, kundli matching, and spiritual remedies.",
+          "provider": {
+            "@type": "Organization",
+            "name": "Daivyaura",
+            "url": "https://daivyaaura.lovable.app"
+          },
+          "areaServed": "IN",
+          "serviceType": "Astrology Consultation",
+          "offers": [
+            { "@type": "Offer", "name": "Vedic Astrology", "price": "1500", "priceCurrency": "INR" },
+            { "@type": "Offer", "name": "Numerology", "price": "1200", "priceCurrency": "INR" },
+            { "@type": "Offer", "name": "Kundli Matching", "price": "2000", "priceCurrency": "INR" },
+            { "@type": "Offer", "name": "Spiritual Remedies", "price": "1000", "priceCurrency": "INR" }
+          ]
+        })}</script>
+      </Helmet>
       {/* Hero */}
       <section className="bg-cosmic-radial cosmic-particles py-16 md:py-20 text-center">
         <div className="container relative z-10">
